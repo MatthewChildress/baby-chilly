@@ -8,7 +8,7 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Placeholder</title>
+        <title>Baby Chilly</title>
       </Head>
       <main>{children}</main>
     </>
