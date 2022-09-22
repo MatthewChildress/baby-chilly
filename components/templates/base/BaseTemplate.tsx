@@ -1,7 +1,7 @@
 import { BaseTemplateContainer } from './BaseTemplate.styled';
 
 export interface IBaseTemplate {
-  sampleTextProp: string;
+  sampleTextProp?: string;
 }
 
 const BaseTemplate: React.FC<IBaseTemplate> = ({ sampleTextProp }) => {

@@ -1,5 +1,5 @@
 export interface INavBar {
-  sampleTextProp: string;
+  sampleTextProp?: string;
 }
 
 const NavBar: React.FC<INavBar> = ({ sampleTextProp }) => {
