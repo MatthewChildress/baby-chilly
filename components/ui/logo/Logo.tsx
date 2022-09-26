@@ -5,12 +5,12 @@ export interface ILogo {
   sampleTextProp?: string;
 }
 
-const Logo: React.FC<ILogo> = ({ sampleTextProp }) => {
+const Logo: React.FC<ILogo> = () => {
   return (
     <LogoContainer>
       <Link href="/">
         <a>
-          <h1>Placeholder</h1>
+          <h1>Baby Chilly!</h1>
         </a>
       </Link>
     </LogoContainer>

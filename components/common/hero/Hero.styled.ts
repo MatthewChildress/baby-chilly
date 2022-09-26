@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const HeroContainer = styled.section`
+    margin-top: 10em;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
+    height:33vh;
     justify-content: space-between;
+    align-items:center;
     padding:1em;
-    border: 1px solid rgba(0,0,0,0.1);
-    background: rgba(0,255,200,1);
-    box-shadow: 0 0 0.4em 0 rgb(0,0,0);
-
-
 `;
+
+export const Announcement = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+`

@@ -1,16 +1,14 @@
-import Hero from '../components/common/hero/Hero';
+import Form from '../components/common/form/Form';
 import Section from '../components/common/section/Section';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
-import Specifics from '../components/ui/specifics/Specifics';
 import type { NextPageWithLayout } from './page';
+
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      <Hero />
       <Section>
-        <Specifics />
+        <Form />
       </Section>
-      <Section />
     </>
   );
 };
