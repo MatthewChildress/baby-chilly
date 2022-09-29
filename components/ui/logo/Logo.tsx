@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { LogoContainer } from './Logo.styled';
+import stork from '../../../public/assets/stork.png';
 
 export interface ILogo {
   sampleTextProp?: string;
@@ -7,13 +8,19 @@ export interface ILogo {
 
 const Logo: React.FC<ILogo> = () => {
   return (
-    <LogoContainer>
+    <div className="flex flex-col-reverse md:flex-row items-center gap-2">
       <Link href="/">
-        <a>
-          <h1>Baby Chilly!</h1>
-        </a>
+        <Image
+          src={stork}
+          width={120}
+          height={100}
+          layout="intrinsic"
+          alt="baby elephant image"
+          className="cursor-pointer"
+        />
       </Link>
-    </LogoContainer>
+      <h1 className="text-3xl font-bold">Baby Chilly!</h1>
+    </div>
   );
 };
 

@@ -1,12 +1,10 @@
-import { TimeContainer } from './Time.styled';
-
 export interface ITime {
   sampleTextProp?: string;
 }
 
 const Time: React.FC<ITime> = () => {
   return (
-    <TimeContainer>
+    <>
       <div>
         <div>
           <h3>Time</h3>
@@ -14,7 +12,7 @@ const Time: React.FC<ITime> = () => {
           <p>4:00pm-7:00pm</p>
         </div>
       </div>
-    </TimeContainer>
+    </>
   );
 };
 

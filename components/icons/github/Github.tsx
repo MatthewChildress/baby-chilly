@@ -1,15 +1,12 @@
-import { GithubContainer } from './Github.styled';
-
 export interface IGithub {
   sampleTextProp?: string;
 }
 
-const Github: React.FC<IGithub> = ({ sampleTextProp }) => {
+const Github: React.FC<IGithub> = () => {
   return (
-    <GithubContainer>
-      {sampleTextProp}
+    <div>
       <div>Placeholder</div>
-    </GithubContainer>
+    </div>
   );
 };
 

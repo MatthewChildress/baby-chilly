@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ButtonContainer } from './Button.styled';
 
 export interface IButton {
   sampleTextProp?: string;
@@ -7,11 +6,11 @@ export interface IButton {
 
 const Button: React.FC<IButton> = () => {
   return (
-    <ButtonContainer>
+    <button>
       <Link href="rsvp">
         <a>RSVP</a>
       </Link>
-    </ButtonContainer>
+    </button>
   );
 };
 

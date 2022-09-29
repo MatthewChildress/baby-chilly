@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import GlobalStyle from '../styles/GlobalStyles';
+import '../styles/globals.css';
 import { NextPageWithLayout } from './page';
 
 interface AppPropsWithLayout extends AppProps {
@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(
     <>
-      <GlobalStyle />
       <Component {...pageProps} />
     </>
   );

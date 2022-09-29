@@ -1,7 +1,6 @@
 import Place from '../place/Place';
 import Time from '../time/Time';
 import Welcome from '../welcome/Welcome';
-import { InteriorContainer, SpecificsContainer } from './Specifics.styled';
 
 export interface ISpecifics {
   sampleTextProp?: string;
@@ -9,13 +8,13 @@ export interface ISpecifics {
 
 const Specifics: React.FC<ISpecifics> = () => {
   return (
-    <SpecificsContainer>
+    <>
       <Welcome />
-      <InteriorContainer>
+      <div>
         <Time />
         <Place />
-      </InteriorContainer>
-    </SpecificsContainer>
+      </div>
+    </>
   );
 };
 

@@ -1,17 +1,16 @@
 import Logo from '../../ui/logo/Logo';
 import NavBar from '../../ui/navbar/NavBar';
-import { HeaderContainer } from './Header.styled';
 
 export interface IHeader {
   sampleTextProp?: string;
 }
 
-const Header: React.FC<IHeader> = ({ sampleTextProp }) => {
+const Header: React.FC<IHeader> = () => {
   return (
-    <HeaderContainer>
+    <header className="w-full bg-amber-200 md:bg-transparent flex flex-col md:flex-row justify-between px-10 items-center py-2">
       <Logo />
       <NavBar />
-    </HeaderContainer>
+    </header>
   );
 };
 

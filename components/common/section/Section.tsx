@@ -1,11 +1,9 @@
-import { SectionContainer } from './Section.styled';
-
 export interface ISection {
   children?: React.ReactNode;
 }
 
 const Section: React.FC<ISection> = ({ children }) => {
-  return <SectionContainer>{children}</SectionContainer>;
+  return <section>{children}</section>;
 };
 
 export default Section;

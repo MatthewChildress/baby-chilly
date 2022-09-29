@@ -1,7 +1,9 @@
 import { IForm } from './Form';
 
 const base: IForm = {
-  sampleTextProp: 'Hello World!',
+  name: 'Matt',
+  email: 'matt@text.com',
+  checkbox: true,
 };
 
 export const mockFormProps = {
