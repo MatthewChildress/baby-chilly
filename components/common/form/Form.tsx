@@ -34,7 +34,8 @@ const Form: NextPage = () => {
 
     const content = await rawResponse.json();
 
-    alert(content.data.tableRange);
+    console.log(content);
+    alert('Thanks for getting back to us!');
 
     setMessage('');
     setPhone('');
@@ -43,8 +44,14 @@ const Form: NextPage = () => {
   };
   return (
     <>
-      <div className="h-screen">
-        <div className="max-w-3xl mx-auto py-16 bg-yellow-200 ">
+      <div className="flex justify-center items-center h-screen">
+        <div className="w-2/3 md:w-1/3 h-1/2 mx-auto py-16 bg-yellow-200 rounded-md">
+          <h2 className="flex items-center justify-center text-3xl font-bold">
+            Let us know if you are able to go!
+          </h2>
+          <h3 className="flex items-center justify-center text-xl fond-bold">
+            Put in the message if you can or can not and anything else.
+          </h3>
           <form
             action="POST"
             className="py-4 space-y-4"
@@ -108,7 +115,7 @@ const Form: NextPage = () => {
             <div className="flex items-center justify-center">
               <button
                 type="submit"
-                className="flex items-center text-2xl font-bold justify-center text-sm w-64 rounded-md shadow py-3 px-2 text-amber-800 bg-orange-300"
+                className="flex items-center text-2xl font-bold justify-center  rounded-md shadow py-2 px-4 text-amber-800 bg-orange-300"
               >
                 Save
               </button>
