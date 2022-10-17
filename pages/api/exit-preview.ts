@@ -1,6 +1,6 @@
 export default async function exit(_: any, res: any) {
     res.clearPreviewData()
 
-    res.writehead(307, { Location: '/' })
+    res.writeHead(307, { Location: '/blog' })
     res.end()
 }

@@ -50,83 +50,99 @@ export async function getAllArticlesWithSlug() {
     return data?.allArticles
 }
 
-export async function getAllArticlesForHome(preview: any) {
+export async function getAllArticlesForHome() {
     const data: any = await fetchAPI(
         `
-        query Articles($where: JSON) {
-            articles(sort: "date:desc", limit: 10, where: $where) {
-                title
-                slug
-                data
-                image {
-                    url
-                }
-                author {
-                    name
-                    picture {
-                        url
+        query Articles {
+            articles {
+                data {
+                    attributes {
+                        title
+                        slug
+                        dateString
+                        image {
+                            data {
+                                attributes {
+                                    url
+                                }
+                            }
+                        }
+                        author {
+                            data {
+                                attributes {
+                                    name
+                                    picture {
+                                        data {
+                                            attributes {
+                                                url
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
         `,
-        {
-            variables: {
-                where: {
-                    ...(preview ? {} : { status: "published" }),
-                },
-            },
-        }
     )
     return data?.articles
 }
 
-export async function getArticlesAndMoreArticles(slug: string, preview: any) {
+export async function getArticleAndMoreArticles(slug: any) {
     const data: any = await fetchAPI(
         `
-        query ArticlesBySlug($where: JSON, $where_ne: JSON) {
-            articles(where: $where) {
+        query ArticlesBySlug {
+            articles {
                 title
                 slug
                 content
-                date
+                dateString
                 image {
-                    url
+                    data {
+                        attributes {
+                            url
+                        }
+                    }
                 }
                 author {
                     name
                     picture {
-                        url
+                        data {
+                            attributes {
+                                url
+                            }
+                        }
                     }
+                }
                 }
             }
 
-            moreArticles: articles(sort: "date:desc", limit: 2, where: $where_ne) {
+            moreArticles: articles {
                 title
                 slug
-                date
+                dateString
                 image {
-                    url
+                    data {
+                        attributes {
+                            url
+                        }
+                    }
                 }
                 author {
                     name
                     picture {
-                        url
+                        data {
+                            attributes {
+                                url
+                            }
+                        }
                     }
                 }
             }
         }
         `,
-        {
-            preview,
-            variables: {
-                where: {
-                    slug,
-                    ...(preview ? {} : { status: 'published' }),
-                    slug_ne: slug,
-                },
-            },
-        }
     )
     return data
 }

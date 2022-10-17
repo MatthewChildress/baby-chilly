@@ -1,6 +1,6 @@
-import { IArticlePreview } from './ArticlePreview';
+import { IArticleHero } from './ArticleHero';
 
-const base: IArticlePreview = {
+const base: IArticleHero = {
   sampleTextProp: 'Hello World!',
   title: '',
   image: undefined,
@@ -9,6 +9,6 @@ const base: IArticlePreview = {
   slug: ''
 };
 
-export const mockArticlePreviewProps = {
+export const mockArticleHeroProps = {
   base,
 };
